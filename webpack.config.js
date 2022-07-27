@@ -20,9 +20,11 @@ console.log(mode + ' mode');
 
 module.exports = {
    mode: mode,
+   entry: {
+      index: './src/index.js'
+   },
    output: {
-      filename: '[name].[contenthash].js',
-      assetModuleFilename: "assets/[hash][ext][query]",
+      filename: 'js/[name].[contenthash].js',
       clean: true,
    },
    devtool: 'source-map',
@@ -34,17 +36,29 @@ module.exports = {
    plugins: [
       ...PAGES.map(page => new HtmlWebpackPlugin({
          template: `${PAGES_DIR}/${page}/${page}.pug`,
-         filename: `./${page}.html`,
+         filename: `./pages/${page}/${page}.html`,
       })),
       new MiniCssExtractPlugin({
-         filename: '[name].[contenthash].css'
+         filename: 'styles/[name].[contenthash].css'
       })
    ],
    module: {
       rules: [
          {
-            test: /\.(woff|woff2|eot|ttf|otf|)$/i,
+            test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
             type: 'asset/resource',
+            exclude: [/fonts/],
+            generator: {
+               filename: 'assets/images/[name][ext]',
+            },
+         },
+         {
+            test: /fonts.*\.(woff|woff2|eot|ttf|otf|svg)$/i,
+            type: 'asset/resource',
+            exclude: [/images/],
+            generator: {
+               filename: 'assets/fonts/[name][ext]',
+            },
          },
          {
             test: /\.html$/i,
@@ -68,10 +82,6 @@ module.exports = {
                },
                'sass-loader',
             ],
-         },
-         {
-            test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-            type: 'asset/resource',
          },
          {
             test: /\.pug$/,
