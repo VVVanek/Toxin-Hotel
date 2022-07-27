@@ -1,0 +1,26 @@
+@import './global';
+@import './fonts';
+@import './default-styles.scss';
+
+
+
+html {
+   font-family: 'Montserrat';
+   font-size: 15px;
+}
+
+h1 {
+   color: $mainColor;
+
+}
+
+.bg {
+   width: 400px;
+   height: 267px;
+   background-image: url(../img/person2.jpg);
+}
+
+.mars {
+   width: 1000px;
+}
+
