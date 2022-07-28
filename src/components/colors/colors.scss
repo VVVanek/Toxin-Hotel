@@ -1,0 +1,33 @@
+@import '../../styles/mixins.scss';
+
+.color {
+   display: flex;
+   min-width: 281px;
+
+   &_padding-bottom {
+      padding-bottom: 20px;
+   }
+}
+.color__square {
+   width: 70px;
+   height: 70px;
+   background: #1F2041;
+   border-radius: 6px;
+}
+.color__description {
+   padding-left: 40px;
+   padding-top: 1px;
+   @include center
+}
+.color__title,
+.color__hex {
+   color: #1F2041;
+   line-height: 27.79px;
+   font-size: 19px;
+}
+.color__title {
+   font-weight: 700;
+}
+.color__hex {
+   font-weight: 400;
+}

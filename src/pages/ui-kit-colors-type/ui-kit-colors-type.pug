@@ -1,0 +1,11 @@
+extends ../../layouts/ui-kit-layout.pug
+include ../../components/colors/colors.pug
+
+block variables
+  - title = "Colors & Type"
+
+block content
+  .colors-type-wrapp 
+    .colors-type-container 
+      +colors("Dark Shade 100%", "#1F2041")
+      +colors()
