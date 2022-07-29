@@ -1,4 +1,5 @@
-@import '../../styles/mixins.scss';
+@import '../../styles/mixins';
+@import '../../styles/vars';
 
 .color {
    display: flex;
@@ -11,13 +12,36 @@
 .color__square {
    width: 70px;
    height: 70px;
-   background: #1F2041;
+   background: $mainTextcolor;
    border-radius: 6px;
+
+   &_backround_main {
+      background: $mainTextcolor;
+   }
+   &_backround_75 {
+      background: $textColor75;
+   }
+   &_backround_50 {
+      background: $textColor50;
+   }
+   &_backround_25 {
+      background: $textColor25;
+   }
+   &_backround_5 {
+      background: $textColor5;
+   }
+   &_backround_purple {
+      background: $purpleColor;
+   }
+   &_backround_green {
+      background: $greenColor;
+   }
+   
 }
 .color__description {
    padding-left: 40px;
    padding-top: 1px;
-   @include center
+   @include center;
 }
 .color__title,
 .color__hex {

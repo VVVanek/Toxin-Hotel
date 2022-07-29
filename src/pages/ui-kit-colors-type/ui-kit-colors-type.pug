@@ -6,6 +6,13 @@ block variables
 
 block content
   .colors-type-wrapp 
-    .colors-type-container 
-      +colors("Dark Shade 100%", "#1F2041")
-      +colors()
+    .colors-type-wrapp__container 
+      .colors
+        +colors("color__square_backround_main", "Dark Shade 100%",  "#1F2041", "color_padding-bottom")
+        +colors("color__square_backround_75", "Dark Shade 75%",  "#1F2041", "color_padding-bottom")
+        +colors("color__square_backround_50", "Dark Shade 50%",  "#1F2041", "color_padding-bottom")
+        +colors("color__square_backround_25", "Dark Shade 25%",  "#1F2041", "color_padding-bottom")
+        +colors("color__square_backround_5", "Dark Shade 5%",  "#1F2041", "color_padding-bottom")
+        +colors("color__square_backround_purple", "Purple",  "#BC9CFF", "color_padding-bottom")
+        +colors("color__square_backround_green", "Green",  "#6FCF97")
+

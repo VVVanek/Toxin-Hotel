@@ -1,8 +1,8 @@
-mixin colors(title, hex)
-  .color.color_padding-bottom
-    .color__square
-    .color__description  
-       h2.color__title #{title}
-       p.color__hex #{hex}
+mixin colors(background, title, hex, ...isPadding)
+  div(class = `color ${isPadding}`)
+    div(class = `color__square ${background}`)
+    .color__description
+      h2.color__title #{title}
+      p.color__hex #{hex}
 
   
