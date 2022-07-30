@@ -1,6 +1,6 @@
-mixin colors(background, title, hex, ...isPadding)
-  div(class = `color ${isPadding}`)
-    div(class = `color__square ${background}`)
+mixin color(background, title, hex, isMargin)
+  div(class = `color color_${isMargin}`)
+    div(class = `color__square color__square_${background}`)
     .color__description
       h2.color__title #{title}
       p.color__hex #{hex}

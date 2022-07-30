@@ -1,4 +1,15 @@
 .colors-type-wrapp {
+   margin-top: 65px; 
+}
+
+.colors-type-wrapp__container {
+   display: flex;
    width: 1140px;
-   margin: 65px auto 0; 
+   margin: 0 auto; 
+}
+.colors {
+   margin-right: 425px;
+}
+.types {
+   min-width: 440px;
 }

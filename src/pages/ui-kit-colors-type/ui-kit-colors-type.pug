@@ -1,5 +1,6 @@
 extends ../../layouts/ui-kit-layout.pug
 include ../../components/colors/colors.pug
+include ../../components/type/type.pug
 
 block variables
   - title = "Colors & Type"
@@ -8,11 +9,43 @@ block content
   .colors-type-wrapp 
     .colors-type-wrapp__container 
       .colors
-        +colors("color__square_backround_main", "Dark Shade 100%",  "#1F2041", "color_padding-bottom")
-        +colors("color__square_backround_75", "Dark Shade 75%",  "#1F2041", "color_padding-bottom")
-        +colors("color__square_backround_50", "Dark Shade 50%",  "#1F2041", "color_padding-bottom")
-        +colors("color__square_backround_25", "Dark Shade 25%",  "#1F2041", "color_padding-bottom")
-        +colors("color__square_backround_5", "Dark Shade 5%",  "#1F2041", "color_padding-bottom")
-        +colors("color__square_backround_purple", "Purple",  "#BC9CFF", "color_padding-bottom")
-        +colors("color__square_backround_green", "Green",  "#6FCF97")
+        +color("backround_main", "Dark Shade 100%",  "#1F2041", "margin-bottom")
+        +color("backround_75", "Dark Shade 75%",  "#1F2041", "margin-bottom")
+        +color("backround_50", "Dark Shade 50%",  "#1F2041", "margin-bottom")
+        +color("backround_25", "Dark Shade 25%",  "#1F2041", "margin-bottom")
+        +color("backround_5", "Dark Shade 5%",  "#1F2041", "margin-bottom")
+        +color("backround_purple", "Purple",  "#BC9CFF", "margin-bottom")
+        +color("backround_green", "Green",  "#6FCF97")
+      .types
+        +type([
+          {
+            type: "type_h1",
+            type__title: "title_h1", 
+            type__descr: "h1_text", 
+            title: "H1", 
+            text: "This one is the sub-section or widget title", 
+          },
+          {
+            type: "type_h2",
+            type__title: "title_h2", 
+            type__descr: "h2_text", 
+            title: "H2", 
+            text: "Next one is the item title inside widgets", 
+          },
+          { 
+            type: "type_h3",
+            type__title: "title_h3", 
+            type__descr: "h3_text", 
+            title: "H3", 
+            text: "This is a label or CTA text", 
+          },
+          { 
+            type: "type_body",
+            type__title: "title_body", 
+            type__descr: "body_text", 
+            title: "Body", 
+            text: "This is the body text which is used for most  of the design, like paragraphs, lists, etc."
+          }
+        ])
+
 

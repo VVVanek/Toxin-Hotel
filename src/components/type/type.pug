@@ -1,0 +1,5 @@
+mixin type(typeOptions=[])
+  each option in typeOptions
+      div(class = `${option.type}`)
+        p(class = `type__${option.type__title}`) #{option.title}
+        p(class = `type__${option.type__descr}`) #{option.text}

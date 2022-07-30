@@ -1,0 +1,82 @@
+@import '../../styles/vars';
+
+.type_h1 {
+   display: flex;
+   margin-bottom: 51px;
+}
+.type_h2 {
+   display: flex;
+   margin-bottom: 53px;
+}
+.type_h3 {
+   display: flex;
+   margin-bottom: 47px;
+}
+.type_body {
+   display: flex;
+   margin-left: -9px;
+}
+
+.type {
+  /* Title */
+  &__title_h1,
+  &__title_h2,
+  &__title_h3,
+  &__title_body {
+     font-weight: 400;
+     color: $textColor25;
+  }
+  &__title_h1 {
+     font-size: 24px;
+     line-height: 29px;
+  }
+  &__title_h2 {
+     font-size: 19px;
+     line-height: 23px;
+  }
+  &__title_h3 {
+     font-size: 12px;
+     line-height: 15px;
+     padding-left: 11px;
+  }
+  &__title_body {
+     font-size: 14px;
+     line-height: 24px;
+  }
+  /* Text */
+  &__h1_text,
+  &__h2_text,
+  &__h3_text {
+     font-weight: 700;
+     color: $mainTextcolor;
+  }
+  &__h1_text {
+     font-size: 24px;
+     line-height: 29px;
+     padding-left: 29px;
+  }
+  &__h2_text {
+     font-size: 19px;
+     line-height: 23px;
+     padding-left: 31px;
+  }
+  &__h3_text {
+     font-size: 12px;
+     line-height: 15px;
+     text-transform: uppercase;
+     padding-left: 30px;
+   }
+
+  &__body_text {
+     max-width: 340px;
+     padding-left: 30px;
+
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 24px;
+     color: $textColor75;
+}
+
+}
+
+
