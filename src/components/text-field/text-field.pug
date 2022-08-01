@@ -1,0 +1,8 @@
+mixin text-field(fieldOptions=[])
+  each option in fieldOptions
+    .field 
+      .field__head
+        h2.field__title #{option.title}
+        h2.field__subtitle #{option.subtitle}
+      .field__input 
+        input(type="text", class=`text-field text-field_${option.style}`, placeholder = `${option.placeholder}`)

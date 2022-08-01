@@ -1,0 +1,26 @@
+.form-elements {
+   margin-top: 85px;
+}
+
+.form-elements-container {
+   display: grid;
+   max-width: 1158px;
+   margin: 0 auto;
+}
+
+.form-elements__first-block,
+.form-elements__second-block,
+.form-elements__third-block {
+   display: grid;
+   grid-template-columns: 320px 260px 320px;
+   grid-template-rows: 1fr;
+   column-gap: 126px;
+}
+
+.form-elemtnts__padding-wrapp {
+   padding-left: 6px;
+} 
+
+.text-field-wrapp {
+   margin-bottom: 17px;
+}

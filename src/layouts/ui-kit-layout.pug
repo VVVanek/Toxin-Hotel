@@ -10,6 +10,7 @@ html(lang="ru")
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
       title #{title}
    body 
-     block header
-       +header
-     block content
+     .page-wrapper
+        block header
+          +header
+        block content

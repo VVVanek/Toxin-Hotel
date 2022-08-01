@@ -1,0 +1,31 @@
+extends ../../layouts/ui-kit-layout.pug
+include ../../components/text-field/text-field.pug
+
+block variables
+  - title = "Form Elements";
+
+block content
+  .form-elements 
+    .form-elements-container 
+      .form-elements__first-block
+        .form-elements__fields 
+          .text-field-wrapp
+            +text-field([
+              {
+                title: "text field", 
+                subtitle: "default", 
+                placeholder: "Email"
+              }
+              ])
+          .text-field-wrapp
+            +text-field([
+            {
+              style: "hover-focus",
+              title: "text field", 
+              subtitle: "hover / focus", 
+              placeholder: "This is pretty awesome"
+            }
+            ])
+      .form-elements__second-block
+      .form-elements__third-block
+        

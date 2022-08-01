@@ -3,3 +3,20 @@
    justify-content: center;
    flex-direction: column;
 }
+@mixin title($fs:24px, $lh:29px, $tt: none) { 
+   font-family: $mainFontFamily;
+   font-style: normal;
+   font-weight: 700;
+   font-size: $fs;
+   line-height: $lh;
+   color: $mainTextcolor;
+   text-transform: $tt;
+}
+@mixin plain-text {
+   font-family: $mainFontFamily;
+   font-style: normal;
+   font-weight: 400;
+   font-size: $mainFontSize;
+   line-height: 24px;
+   color: $textColor75;
+}
