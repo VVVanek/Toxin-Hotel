@@ -1,34 +1,12 @@
 @import '../../styles/mixins';
 @import '../../styles/vars';
 
-
-.field__head {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding-bottom: 3px;
-}
-
-.field__title {
-   @include title(12px, 15px, uppercase);
-}
-
-.field__subtitle {
-   font-weight: 400;
-   font-size: 12px;
-   line-height: 15px;
-   text-transform: uppercase;
-   color: $textColor50;
-
-   padding-bottom: 5px;
-}
-
 .text-field {
    width: 320px;
    height: 44px;
    
    background: #FFFFFF;
-   border: 1px solid $textColor25;
+   border: 1px solid $borderColor25;
    border-radius: 4px;
 
    padding: 13px 0 13px 15px;
@@ -44,13 +22,13 @@
 
    &:hover,
    &:focus {
-      border: 1px solid $textColor50;
+      border: 1px solid $borderColor50;
       &::placeholder {
          color: $textColor75;
       }
    }
    &_hover-focus {
-      border: 1px solid $textColor50;
+      border: 1px solid $borderColor50;
       &::placeholder {
          color: $textColor75;
       }

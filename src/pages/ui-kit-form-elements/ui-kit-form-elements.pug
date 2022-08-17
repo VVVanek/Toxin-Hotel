@@ -1,5 +1,7 @@
 extends ../../layouts/ui-kit-layout.pug
 include ../../components/text-field/text-field.pug
+include ../../components/head/head.pug
+include ../../components/dropdown/dropdown.pug
 
 block variables
   - title = "Form Elements";
@@ -10,22 +12,47 @@ block content
       .form-elements__first-block
         .form-elements__fields 
           .text-field-wrapp
+            +head("text field", "default")
             +text-field([
               {
-                title: "text field", 
-                subtitle: "default", 
                 placeholder: "Email"
               }
               ])
           .text-field-wrapp
+            +head("text field", "hover / focus")
             +text-field([
             {
               style: "hover-focus",
-              title: "text field", 
-              subtitle: "hover / focus", 
               placeholder: "This is pretty awesome"
             }
             ])
+          .text-field-wrapp
+              +head("dropdown")
+              +dropdown({
+                  dropdownType: "default",
+                  previewText: "Сколько гостей",
+                  contentItems: [
+                    {
+                      itemText: "Взрослые"
+                    },
+                    {
+                      itemText: "Дети"
+                    },
+                    {
+                      itemText: "Младенцы"
+                    },
+                  ],
+                  controlButtons: [
+                    {
+                      buttonName: "Очистить",
+                      isButtonHidden: true,
+                      clearClass: "dropdown__button-clear"
+                    },
+                    {
+                      buttonName: "Применить",
+                    }
+                  ],
+              })
       .form-elements__second-block
       .form-elements__third-block
         

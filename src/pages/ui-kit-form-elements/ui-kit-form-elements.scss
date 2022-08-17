@@ -22,5 +22,9 @@
 } 
 
 .text-field-wrapp {
-   margin-bottom: 17px;
+   margin-bottom: 16px;
+
+   &:nth-child(2) {
+      margin-bottom: 20px;
+   }
 }

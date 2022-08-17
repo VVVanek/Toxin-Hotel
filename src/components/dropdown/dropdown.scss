@@ -1,0 +1,171 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.dropdown {
+
+   position: relative;
+   &_default {
+      width: 320px;
+      height: 44px;
+   }
+
+   &__input {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 44px;
+
+      padding: 0 0 0 15px;
+      background: #FFFFFF;
+      border: 1px solid $textColor25;
+      border-radius: 4px;
+
+      cursor: pointer;
+
+      @include plain-text;
+
+      &:hover {
+      border: 1px solid $textColor50;
+      }
+   }
+
+   &_input-focus {
+      border: 1px solid $textColor50;
+   }
+
+   &__caret {
+      position: absolute;
+      z-index: 1;
+      top: 15px;
+      right: 16px;
+   }
+
+   &_caret-rotate {
+      transform: rotate(180deg);
+   }
+
+
+   &__content {
+      position: absolute;
+      display: block;
+      top: 40px;
+      width: 320px;
+
+      background: #FFFFFF;
+      border: 1px solid $borderColor50;
+      border-radius: 4px;
+      border-top: none;
+      box-shadow: 0px 10px 20px $textColor5;
+   }
+
+   &__menu {
+      padding-top: 4px;
+   }
+
+   &__menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 7px 6px 0 0;
+
+      &-text {
+         @include title(12px, 15px, uppercase);
+         padding: 0 0 5px 15px;
+      }
+   }
+
+   &__counter {
+
+      display: flex;
+      align-items: center;
+
+      &-btn-minus {
+         position: relative;
+         display: block;
+         width: 30px;
+         height: 30px;
+         background: #FFFFFF;
+         opacity: 0.6;
+   
+         border: 1px solid $borderColor25;
+         border-radius: 22px;
+   
+         &::after {
+            content: "-";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+
+            color: $textColor75;
+         }
+
+         &:hover {
+            opacity: 0.85;
+         }
+      }
+      &-btn-plus {
+         position: relative;
+         display: block;
+         width: 30px;
+         height: 30px;
+         background: #FFFFFF;
+   
+         border: 1px solid $borderColor50;
+         border-radius: 22px;
+         &::after {
+            content: "+";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            color: $textColor50;
+         }
+
+         &:hover {
+            &::after {
+               color: $textColor75;
+            }
+         }
+      }
+
+      &-count {
+         @include title(12px, 15px, uppercase);
+         padding: 5px 12px 10px;
+         width: 32px;
+      }
+   }
+   
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 6px 13px 7px;
+
+   }
+
+   &__button {
+      width: 84px;
+      height: 15px;
+
+      @include title(12px, 15px, uppercase);
+
+      color: $purpleColor;
+      background: none;
+
+      &:hover {
+         color: rgba(31, 32, 65, 0.5);
+      }
+      
+   }
+}
+
+.hidden {
+   visibility: hidden;
+} 
+.content-open {
+   border-radius: 4px 4px 0 0;
+}
+.btnActive {
+   opacity: 1;
+}

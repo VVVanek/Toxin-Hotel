@@ -1,0 +1,19 @@
+mixin dropdown({contentItems=[], controlButtons=[], dropdownType, previewText, clearDisabled, applyDisabled})
+  div(class=`dropdown dropdown_${dropdownType}`)
+    input(class="dropdown__input", readonly, value=`${previewText}`)
+    .dropdown__caret.fa-solid.fa-angle-down
+    .dropdown__content.hidden
+      ul.dropdown__menu
+        each content in contentItems
+          li.dropdown__menu-item
+            .dropdown__menu-item-text #{content.itemText}
+            .dropdown__counter
+              button(class="dropdown__counter-btn dropdown__counter-btn-minus", data-direction="minus")
+              input(type="text",readonly, class="dropdown__counter-count", value="0")
+              button(class="dropdown__counter-btn dropdown__counter-btn-plus", data-direction="plus")
+      .dropdown__buttons
+        each button in controlButtons 
+          -
+            let hiddenButton = button.isButtonHidden ? "hidden" : ""
+
+          button(class=`dropdown__button ${hiddenButton} ${button.clearClass}`) #{button.buttonName}

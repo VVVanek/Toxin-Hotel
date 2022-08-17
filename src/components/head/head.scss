@@ -1,0 +1,23 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
+.head {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 4px;
+}
+
+.head__title {
+   @include title(12px, 15px, uppercase);
+}
+
+.head__subtitle {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 15px;
+   text-transform: uppercase;
+   color: $textColor50;
+
+   padding-bottom: 5px;
+}
