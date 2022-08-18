@@ -53,6 +53,14 @@ block content
                     }
                   ],
               })
+          .text-field-wrapp
+            +head("masked text field")
+            +text-field([
+              {
+                style: "mask",
+                placeholder: "ДД.ММ.ГГГГ"
+              }
+            ])
       .form-elements__second-block
       .form-elements__third-block
         
