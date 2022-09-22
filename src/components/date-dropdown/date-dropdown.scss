@@ -1,0 +1,123 @@
+@import '../../styles/vars.scss'; 
+@import '../../styles/mixins.scss'; 
+
+.date-dropdown {
+
+   position: relative;
+   width: 150px;
+   height: 44px;
+
+   &_input {
+
+      width: 150px;
+      height: 44px;
+   
+      border: 1px solid $borderColor25;
+      border-radius: 4px;
+      padding: 6px 0 8px 14px;
+   
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $textColor75;
+      background: #FFF;
+
+      cursor: pointer;
+   }
+
+    &__caret.date {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+   } 
+
+}
+
+
+.air-datepicker {
+   min-width: 318px;
+   height: 367px;
+
+   background: #FFFFFF;
+   border: 1px solid $borderColor25;
+   border-radius: 4px;
+   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+   --adp-day-cell-width: 30px;
+
+   &-nav--title {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 23px;
+      color: $mainTextcolor; 
+   }
+}
+
+
+.air-datepicker .air-datepicker-nav {
+   padding: 14px 10px 20px 11px;
+}
+
+.air-datepicker-body--day-names .air-datepicker-body--day-name {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 15px;
+   text-transform: none;
+
+   color: $purpleColor;
+}
+
+.fa-sharp.fa-solid.fa-arrow-right,
+.fa-sharp.fa-solid.fa-arrow-left {
+   width: 23.93px;
+   height: 15px;
+   font-size: 20px;
+   color: $purpleColor;
+}
+
+.fa-sharp.fa-solid.fa-arrow-left {
+   width: 8px;
+   height: 15px;
+   font-size: 20px;
+   color: $purpleColor;
+}
+.fa-sharp.fa-solid.fa-arrow-right {
+   width: 29px;
+   height: 15px;
+   font-size: 20px;
+   color: $purpleColor;
+}
+
+.air-datepicker-body--cells.-days- .air-datepicker-cell.-day- {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 15px;
+
+   color: $textColor50;
+}
+
+.air-datepicker-body--cells.-days- .air-datepicker-cell.-day-.-other-month- {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 15px;
+   display: flex;
+   align-items: center;
+   text-align: center;
+
+   color: $textColor25;
+}
+
+
+ 
+
+
+

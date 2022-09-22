@@ -1,7 +1,7 @@
 mixin dropdown({contentItems=[], controlButtons=[], dropdownType, previewText, clearDisabled, applyDisabled})
   div(class=`dropdown dropdown_${dropdownType}`)
     input(class="dropdown__input", readonly, value=`${previewText}`)
-    .dropdown__caret.fa-solid.fa-angle-down
+    .dropdown__caret.fa-solid.fa-angle-down.guests
     .dropdown__content.hidden
       ul.dropdown__menu
         each content in contentItems

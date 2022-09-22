@@ -11,7 +11,7 @@
 
    &__input {
       position: relative;
-      z-index: 1;
+      z-index: 3;
       width: 100%;
       height: 44px;
 
@@ -33,9 +33,9 @@
       border: 1px solid $textColor50;
    }
 
-   &__caret {
+   &__caret.guests {
       position: absolute;
-      z-index: 1;
+      z-index: 4;
       top: 15px;
       right: 16px;
    }
@@ -50,6 +50,7 @@
       display: block;
       top: 40px;
       width: 320px;
+      z-index: 2;
 
       background: #FFFFFF;
       border: 1px solid $borderColor50;

@@ -1,0 +1,5 @@
+mixin date-dropdown({placeholder, inpClass})   
+  div(class="date-dropdown")
+    input(class=`date-dropdown_input date-dropdown_input-${inpClass}`, readonly, placeholder=`${placeholder}`)
+    .date-dropdown__caret.fa-solid.fa-angle-down.date 
+
